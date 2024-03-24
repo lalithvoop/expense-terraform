@@ -13,7 +13,7 @@
 module "frontend" {
   source        = "./modules/app"
   instance_type = var.instance_type
-  component     = "frontend"
+  component     = var.component
   env           = var.env
   zone_id       = var.zone_id
 }
