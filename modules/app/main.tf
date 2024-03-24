@@ -19,7 +19,7 @@ resource "null_resource" "ansible"{
 
         inline = [
             "sudo pip3 install ansible",
-            "ansible-pull - i localhost, -U https://github.com/lalithvoop/expense-terraform.git expense.yml -e env=${var.env} -e role_name=${var.component}"
+            "ansible-pull - i localhost, -U https://github.com/lalithvoop/ansible-expense.git expense.yml -e env=${var.env} -e role_name=${var.component}"
         ]
     }
 }
