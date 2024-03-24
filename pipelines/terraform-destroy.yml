@@ -1,6 +1,6 @@
 format_version: 10
 pipelines:
-  tf-create-pipeline: 
+  tf-destroy-pipeline: 
     group: terraform-group
     materials:
       mygit: 
