@@ -3,7 +3,8 @@ resource "aws_instance" "instance"{
     vpc_security_group_ids = [data.aws_security_group.selected.id]
     instance_type = var.instance_type
     tags = {
-        Name = var.component
+        Name = var.component,
+        "monitor"="yes"
     }    
 } 
 
