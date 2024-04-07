@@ -2,6 +2,15 @@ resource "aws_instance" "instance"{
     ami = data.aws_ami.ami.id
     vpc_security_group_ids = [data.aws_security_group.selected.id]
     instance_type = var.instance_type
+
+    instance_market_options {
+        market_type = "spot"
+        spot_options {
+            instance_interruption_behavior = "stop"
+            spot_instance_type             = "persistent"
+        }
+    }
+
     tags = {
         Name = var.component,
         "monitor"="yes"
